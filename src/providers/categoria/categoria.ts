@@ -24,24 +24,23 @@ export class CategoriaProvider {
 
   atualiza (categoria) : Promise <Response> {
 
-    //let cabecalho = new Headers ();
+    let cabecalho = new Headers ();
 
-    //cabecalho.append ('Content-type', 'application/json');
+    cabecalho.append ('Content-type', 'application/json');
 
-   // return this.http.put (this.baseURL, JSON.stringify (categoria), {headers : cabecalho}).toPromise ();
+    return this.http.put (this.baseURL, JSON.stringify (categoria), {headers : cabecalho}).toPromise ();
 
-   return true;
+  
   }
 
   insere (categoria) : Promise <Response> {
 
-    //let cabecalho = new Headers ();
+    let cabecalho = new Headers ();
 
-   // cabecalho.append ('Content-type', 'application/json');
+    cabecalho.append ('Content-type', 'application/json');
 
-   // return this.http.post (this.baseURL, JSON.stringify (categoria), {headers : cabecalho}).toPromise ();
+    return this.http.post (this.baseURL, JSON.stringify (categoria), {headers : cabecalho}).toPromise ();
 
-   return true;
   }
 
 
