@@ -10,11 +10,14 @@ import { ProdutosPage } from '../pages/produtos/produtos';
 import { CategoriasPage } from '../pages/categorias/categorias';
 import { FormProdutoPage } from '../pages/form-produto/form-produto';
 import { FormCategoriaPage } from '../pages/form-categoria/form-categoria';
+import { TipoRefeicaoPage } from '../pages/tipo-refeicao/tipo-refeicao';
+import { FormTipoPage } from '../pages/form-tipo/form-tipo';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ProdutoProvider } from '../providers/produto/produto';
 import { CategoriaProvider } from '../providers/categoria/categoria';
+import { TipoProvider } from '../providers/tipo/tipo';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import { CategoriaProvider } from '../providers/categoria/categoria';
     CategoriasPage,
     TabsPage,
     FormProdutoPage,
-    FormCategoriaPage
+    FormCategoriaPage,
+    TipoRefeicaoPage,
+    FormTipoPage
   ],
   imports: [
     BrowserModule,
@@ -37,14 +42,17 @@ import { CategoriaProvider } from '../providers/categoria/categoria';
     CategoriasPage,
     TabsPage,
     FormProdutoPage,
-    FormCategoriaPage
+    FormCategoriaPage,
+    TipoRefeicaoPage,
+    FormTipoPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ProdutoProvider,
-    CategoriaProvider
+    CategoriaProvider,
+    TipoProvider
   ]
 })
 export class AppModule {}

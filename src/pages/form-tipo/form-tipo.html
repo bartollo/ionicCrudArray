@@ -1,0 +1,27 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons left>
+     <button ion-button icon-only small clear (click) = "voltaParaListagem()">
+       <ion-icon name = "arrow-back"></ion-icon>
+     </button>
+   </ion-buttons>
+    <ion-title>Cadastro Tipo</ion-title>
+    <ion-buttons end>
+      <button ion-button></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-list no-lines>
+  <ion-item>
+    <ion-label stacked>Nome</ion-label>
+    <ion-input required placeholder = "Nome do Tipo" type="text" [(ngModel)]="tipo.nome"></ion-input>
+  </ion-item>
+</ion-list>
+<button ion-button block (click) = "saveAndUpdate()">Salvar</button>
+
+</ion-content>
