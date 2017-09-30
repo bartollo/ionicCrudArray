@@ -9,6 +9,8 @@ import { FormProdutoPage } from '../form-produto/form-produto';
 })
 export class ProdutosPage {
 
+  produtos : Array <any>;
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -30,5 +32,6 @@ export class ProdutosPage {
     modal.present ();
 
   }
+
 
 }

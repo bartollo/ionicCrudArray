@@ -34,7 +34,9 @@
 
       <ion-select [(ngModel)] = "produtoCategoria">
 
-        <ion-option *ngFor = "let categoria of categoriaVetor" value = {{categoria.id}}>{{categoria.nome}}</ion-option>
+        <ion-option value = "Entrada">Entrada</ion-option>
+        <ion-option value = "Principal">Prato Principal</ion-option>
+        <ion-option value = "Sobremesa">Sobremesa</ion-option>
 
       </ion-select>
 
@@ -42,6 +44,6 @@
 
   </ion-list>
 
-  <button ion-button block>Salvar</button>
+  <button ion-button block (click) = "addItem()">Salvar</button>
 
 </ion-content>
