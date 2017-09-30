@@ -7,18 +7,23 @@ import { HttpModule } from '@angular/http';
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { ProdutosPage } from '../pages/produtos/produtos';
+import { CategoriasPage } from '../pages/categorias/categorias';
 import { FormProdutoPage } from '../pages/form-produto/form-produto';
+import { FormCategoriaPage } from '../pages/form-categoria/form-categoria';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ProdutoProvider } from '../providers/produto/produto';
+import { CategoriaProvider } from '../providers/categoria/categoria';
 
 @NgModule({
   declarations: [
     MyApp,
     ProdutosPage,
+    CategoriasPage,
     TabsPage,
-    FormProdutoPage
+    FormProdutoPage,
+    FormCategoriaPage
   ],
   imports: [
     BrowserModule,
@@ -29,14 +34,17 @@ import { ProdutoProvider } from '../providers/produto/produto';
   entryComponents: [
     MyApp,
     ProdutosPage,
+    CategoriasPage,
     TabsPage,
-    FormProdutoPage
+    FormProdutoPage,
+    FormCategoriaPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ProdutoProvider
+    ProdutoProvider,
+    CategoriaProvider
   ]
 })
 export class AppModule {}

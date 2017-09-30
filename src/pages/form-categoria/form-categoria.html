@@ -9,7 +9,7 @@
 
     </ion-buttons>
 
-    <ion-title>Produto</ion-title>
+    <ion-title>Cardápio</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -19,29 +19,32 @@
 
   <ion-list no-lines>
 
-    <ion-item>
+     <ion-item>
       <ion-label stacked>Nome</ion-label>
-      <ion-input placeholder = "Nome do produto" type="text" [(ngModel)]="produtoNome"></ion-input>
+      <ion-input placeholder = "Nome do produto" type="text" [(ngModel)]="produto.Nome"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label stacked>Preço (R$)</ion-label>
-      <ion-input placeholder = "Preço do produto" type="number" [(ngModel)]="produtoPreco"></ion-input>
+      <ion-input placeholder = "Preço do produto" type="number" [(ngModel)]="produto.Preco"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label stacked>Categoria</ion-label>
 
-      <ion-select [(ngModel)] = "produtoCategoria">
+      <ion-select [(ngModel)] = "produto.Categoria">
 
-        <ion-option *ngFor = "let categoria of categoriaVetor" value = {{categoria.id}}>{{categoria.nome}}</ion-option>
+        <ion-option value = "Entrada">Entrada</ion-option>
+        <ion-option value = "Principal">Principal</ion-option>
+        <ion-option value = "Sobremesa">Sobremesa</ion-option>
 
       </ion-select>
 
     </ion-item>
 
+
   </ion-list>
 
-  <button ion-button block>Salvar</button>
+  <button ion-button block (click) = "salvar()">Salvar</button>
 
 </ion-content>
