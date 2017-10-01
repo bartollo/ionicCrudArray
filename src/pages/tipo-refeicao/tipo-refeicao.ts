@@ -30,7 +30,6 @@ export class TipoRefeicaoPage {
      modal.present ();
   }
 
-    //confirmação de exclusão
   excluirTipo (tipo : any) {
      let confirm = this.alertCtrl.create({
        title: 'Exclusão de Tipo',

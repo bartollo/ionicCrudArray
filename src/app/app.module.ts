@@ -12,12 +12,15 @@ import { FormProdutoPage } from '../pages/form-produto/form-produto';
 import { FormCategoriaPage } from '../pages/form-categoria/form-categoria';
 import { TipoRefeicaoPage } from '../pages/tipo-refeicao/tipo-refeicao';
 import { FormTipoPage } from '../pages/form-tipo/form-tipo';
+import { CardapioPage } from '../pages/cardapio/cardapio';
+import { FormCardapioPage } from '../pages/form-cardapio/form-cardapio';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ProdutoProvider } from '../providers/produto/produto';
 import { CategoriaProvider } from '../providers/categoria/categoria';
 import { TipoProvider } from '../providers/tipo/tipo';
+import { CardapioProvider } from '../providers/cardapio/cardapio';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,9 @@ import { TipoProvider } from '../providers/tipo/tipo';
     FormProdutoPage,
     FormCategoriaPage,
     TipoRefeicaoPage,
-    FormTipoPage
+    FormTipoPage,
+    CardapioPage,
+    FormCardapioPage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +49,9 @@ import { TipoProvider } from '../providers/tipo/tipo';
     FormProdutoPage,
     FormCategoriaPage,
     TipoRefeicaoPage,
-    FormTipoPage
+    FormTipoPage,
+    CardapioPage,
+    FormCardapioPage
   ],
   providers: [
     StatusBar,
@@ -52,7 +59,8 @@ import { TipoProvider } from '../providers/tipo/tipo';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ProdutoProvider,
     CategoriaProvider,
-    TipoProvider
+    TipoProvider,
+    CardapioProvider
   ]
 })
 export class AppModule {}

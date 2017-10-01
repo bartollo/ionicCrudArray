@@ -6,7 +6,9 @@ import 'rxjs/add/operator/map';
 export class TipoProvider {
 
   public tipoProvider : any;
-  constructor(public http: Http) {
+  constructor(
+    public http: Http
+  ) {
     this.tipoProvider = this.preencherTipos();
   }
 

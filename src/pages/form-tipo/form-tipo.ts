@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TipoRefeicaoPage } from '../tipo-refeicao/tipo-refeicao';
-import {TipoProvider } from '../../providers/tipo/tipo';
+import { TipoProvider } from '../../providers/tipo/tipo';
 
 
 @IonicPage()
@@ -32,7 +32,8 @@ export class FormTipoPage {
     this.navCtrl.pop ();
   }
 
-  saveAndUpdate(tipo) {
+  saveAndUpdate()
+  {
 
     this.arrayTipoProvider = this.tipoProvider.consultaListaTipos();
       if (this.tipo.id == undefined) {
