@@ -1,0 +1,38 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons left>
+     <button ion-button icon-only small clear (click) = "voltaParaListagem()">
+       <ion-icon name = "arrow-back"></ion-icon>
+     </button>
+   </ion-buttons>
+    <ion-title>Cardápio - Item</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list no-lines>
+    <ion-item>
+      <ion-label stacked>Nome</ion-label>
+      <ion-input placeholder = "Nome do item do cardápio" type="text" [(ngModel)]="itemCardapio.nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Preço (R$)</ion-label>
+      <ion-input placeholder = "Preço do item do cardápio" type="number" [(ngModel)]="itemCardapio.valor"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Tipo do Item do Cardápio</ion-label>
+      <ion-select [(ngModel)] = "itemCardapio.tipo">
+        <ion-option *ngFor = "let tipo of listaTipos" value = {{tipo.id}}>{{tipo.nome}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+  </ion-list>
+  <button ion-button block (click) = "saveAndUpdate()">Salvar</button>
+
+</ion-content>
